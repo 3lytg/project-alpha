@@ -1,0 +1,6 @@
+/home/ubuntu/ProjectAlpha/obj/Debug/net8.0/ProjectAlpha.fsproj.AssemblyReference.cache
+/home/ubuntu/ProjectAlpha/obj/Debug/net8.0/ProjectAlpha.AssemblyInfoInputs.cache
+/home/ubuntu/ProjectAlpha/obj/Debug/net8.0/ProjectAlpha.AssemblyInfo.fs
+/home/ubuntu/ProjectAlpha/obj/Debug/net8.0/ProjectAlpha.fsproj.CoreCompileInputs.cache
+/home/ubuntu/ProjectAlpha/obj/Debug/net8.0/ProjectAlpha.MvcApplicationPartsAssemblyInfo.fs
+/home/ubuntu/ProjectAlpha/obj/Debug/net8.0/ProjectAlpha.MvcApplicationPartsAssemblyInfo.cache
