@@ -65,6 +65,45 @@ module Data =
             SafetyStatus = "Banned in EU (2022); still allowed in the US."
             SystemicReality = "Purely aesthetic additive with zero nutritional value, prioritizing product appearance over potential long-term cellular health."
         }
+        {
+            Id = "high-fructose-corn-syrup"
+            ENumber = "N/A"
+            Name = "High Fructose Corn Syrup"
+            Description = "A sweetener made from corn starch that has been processed by glucose isomerase to convert some of its glucose into fructose."
+            CommonUses = ["Soft drinks"; "Breads"; "Cereals"; "Condiments"]
+            Impacts = [
+                (Metabolic, Critical, "Primary driver of non-alcoholic fatty liver disease (NAFLD) and insulin resistance.")
+                (General, High, "Major contributor to the global obesity epidemic.")
+            ]
+            SafetyStatus = "Legal and ubiquitous, despite clear evidence of metabolic harm."
+            SystemicReality = "A byproduct of industrial corn subsidies, HFCS represents the triumph of agricultural policy over public health."
+        }
+        {
+            Id = "sodium-nitrite"
+            ENumber = "E250"
+            Name = "Sodium Nitrite"
+            Description = "Used as a preservative and color fixative in cured meats and fish."
+            CommonUses = ["Bacon"; "Hot dogs"; "Deli meats"; "Smoked fish"]
+            Impacts = [
+                (Carcinogenic, High, "Forms nitrosamines in the stomach, which are potent carcinogens.")
+                (Digestive, Moderate, "Linked to increased risk of colorectal cancer.")
+            ]
+            SafetyStatus = "Regulated levels allowed, but health organizations recommend limiting intake."
+            SystemicReality = "Enables the long-distance transport and shelf-life of low-grade meat products, externalizing health costs to the consumer."
+        }
+        {
+            Id = "tartrazine"
+            ENumber = "E102"
+            Name = "Tartrazine (Yellow 5)"
+            Description = "A synthetic lemon yellow azo dye used as a food coloring."
+            CommonUses = ["Soft drinks"; "Chips"; "Puddings"; "Honey"; "Pickles"]
+            Impacts = [
+                (Allergic, High, "Known to cause hives and asthma-like symptoms in sensitive individuals.")
+                (Neurological, Moderate, "Linked to hyperactivity in children (ADHD-like symptoms).")
+            ]
+            SafetyStatus = "Requires warning labels in the EU; widely used in the US."
+            SystemicReality = "Used to simulate the appearance of natural ingredients in products that are entirely synthetic, deceiving the brain's nutritional signaling."
+        }
     ]
     let AdditionalAdditives = []
     let AllAdditives = (Additives @ AdditionalAdditives) |> List.distinctBy (fun a -> a.Id)
