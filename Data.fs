@@ -5,18 +5,18 @@ open WebSharper
 [<JavaScript>]
 module Data =
     type ImpactLevel = 
-        | [<Constant "Low">] Low 
-        | [<Constant "Moderate">] Moderate 
-        | [<Constant "High">] High 
-        | [<Constant "Critical">] Critical
+        | Low 
+        | Moderate 
+        | High 
+        | Critical
 
     type ImpactType = 
-        | [<Constant "Digestive">] Digestive
-        | [<Constant "Neurological">] Neurological
-        | [<Constant "Allergic">] Allergic
-        | [<Constant "Carcinogenic">] Carcinogenic
-        | [<Constant "Metabolic">] Metabolic
-        | [<Constant "General">] General
+        | Digestive
+        | Neurological
+        | Allergic
+        | Carcinogenic
+        | Metabolic
+        | General
 
     type Additive = {
         Id: string

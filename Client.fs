@@ -33,10 +33,26 @@ module Client =
         | High -> "bg-orange-100 text-orange-800"
         | Critical -> "bg-red-100 text-red-800"
 
+    let ImpactTypeString t =
+        match t with
+        | Digestive -> "Digestive"
+        | Neurological -> "Neurological"
+        | Allergic -> "Allergic"
+        | Carcinogenic -> "Carcinogenic"
+        | Metabolic -> "Metabolic"
+        | General -> "General"
+
+    let ImpactLevelString l =
+        match l with
+        | Low -> "Low"
+        | Moderate -> "Moderate"
+        | High -> "High"
+        | Critical -> "Critical"
+
     let RenderImpact (impactType, level, (description: string)) =
         IndexTemplate.ImpactItem()
-            .Type(string impactType)
-            .Level(string level)
+            .Type(ImpactTypeString impactType)
+            .Level(ImpactLevelString level)
             .Color(GetImpactColor level)
             .Description(description)
             .Doc()
