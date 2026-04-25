@@ -5,12 +5,11 @@ Project Alpha is a functional web application designed to provide a "third-eye p
 ## 🚀 Motivation
 In a globalized food system, additives are often marketed as "safe" or "necessary" for shelf-life and texture. Project Alpha aims to unmask these ingredients, highlighting their roles in metabolic dysfunction, neurological impact, and the broader industrialization of our diet.
 
-## 📸 Screenshot
-![Project Alpha Screenshot](https://3lytg.github.io/project-alpha/)
-`
+## 📸 Screenshots
 
-Load image
-`
+![Main View](screenshot-1.png)
+
+![Detail Modal](screenshot-2.png)
 
 ## 🌐 Try Live
 The application is automatically deployed to GitHub Pages:
