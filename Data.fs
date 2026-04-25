@@ -5,18 +5,18 @@ open WebSharper
 [<JavaScript>]
 module Data =
     type ImpactLevel = 
-        | Low 
-        | Moderate 
-        | High 
-        | Critical
+        | [<Constant "Low">] Low 
+        | [<Constant "Moderate">] Moderate 
+        | [<Constant "High">] High 
+        | [<Constant "Critical">] Critical
 
     type ImpactType = 
-        | Digestive
-        | Neurological
-        | Allergic
-        | Carcinogenic
-        | Metabolic
-        | General
+        | [<Constant "Digestive">] Digestive
+        | [<Constant "Neurological">] Neurological
+        | [<Constant "Allergic">] Allergic
+        | [<Constant "Carcinogenic">] Carcinogenic
+        | [<Constant "Metabolic">] Metabolic
+        | [<Constant "General">] General
 
     type Additive = {
         Id: string
@@ -227,34 +227,47 @@ module Data =
                 (Carcinogenic, Low, "Some animal studies suggest a link to cancer, though evidence in humans is limited.")
                 (Allergic, Moderate, "May cause skin rashes or breathing problems in sensitive individuals.")
             ]
-            SafetyStatus = "Often used in combination with BHA or BHT for synergistic effects."
-            SystemicReality = "Another industrial stabilizer used to mask the degradation of low-quality fats in processed foods."
+            SafetyStatus = "Approved for use, but some health advocacy groups recommend caution."
+            SystemicReality = "Used to stabilize industrial fats, masking the degradation of ingredients that would otherwise be unpalatable."
         }
         {
             Id = "guar-gum"
             ENumber = "E412"
             Name = "Guar Gum"
             Description = "A fiber extracted from guar beans, used as a thickener and stabilizer."
-            CommonUses = ["Gluten-free baking"; "Dairy products"; "Sauces"; "Soups"]
+            CommonUses = ["Ice cream"; "Salad dressings"; "Gluten-free baking"; "Soups"]
             Impacts = [
                 (Digestive, Moderate, "Can cause gas, bloating, and cramps in high amounts.")
-                (Metabolic, Low, "May help lower cholesterol, but also interferes with the absorption of some nutrients.")
+                (General, Low, "May help lower cholesterol, but also interferes with the absorption of some nutrients.")
             ]
-            SafetyStatus = "Generally safe, but can be problematic for those with sensitive digestive systems."
-            SystemicReality = "A 'natural' thickener used to provide body to highly diluted or processed liquid products."
+            SafetyStatus = "Generally safe, but can cause digestive distress in sensitive individuals."
+            SystemicReality = "An industrial thickener that replaces the natural texture of whole foods, often used to make water-based mixtures feel creamy."
         }
         {
             Id = "sucralose"
             ENumber = "E955"
             Name = "Sucralose"
             Description = "An artificial sweetener that is about 600 times sweeter than sucrose."
-            CommonUses = ["Sugar-free snacks"; "Beverages"; "Baking mixes"]
+            CommonUses = ["Diet drinks"; "Sugar-free snacks"; "Baking mixes"]
             Impacts = [
                 (Digestive, Moderate, "May reduce the number of beneficial bacteria in the gut by up to 50%.")
                 (Metabolic, Moderate, "Can affect insulin sensitivity and blood sugar response despite being calorie-free.")
             ]
-            SafetyStatus = "Approved globally, but long-term impact on the microbiome is a growing concern."
-            SystemicReality = "Marketed as a 'healthy' alternative to sugar while potentially causing different but equally significant metabolic disruptions."
+            SafetyStatus = "Approved globally, but long-term effects on the gut microbiome are a growing concern."
+            SystemicReality = "A chlorinated sugar derivative that allows the food industry to market 'zero calorie' health claims while potentially disrupting metabolic health."
+        }
+        {
+            Id = "red-40"
+            ENumber = "E129"
+            Name = "Red 40 (Allura Red AC)"
+            Description = "A synthetic red azo dye used as a food coloring."
+            CommonUses = ["Candies"; "Soft drinks"; "Cereals"; "Pastries"]
+            Impacts = [
+                (Neurological, Moderate, "Linked to hyperactivity and ADHD-like symptoms in children.")
+                (Allergic, Moderate, "May cause allergic reactions in some individuals.")
+            ]
+            SafetyStatus = "Requires warning labels in the EU; widely used in the US."
+            SystemicReality = "Used to make synthetic food products look like they contain real fruit, specifically targeting children's visual preferences."
         }
     ]
 
